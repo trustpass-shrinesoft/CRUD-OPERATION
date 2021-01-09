@@ -1,5 +1,5 @@
 <?php
 
-include_once("index.html");
+include_once("Demo_App/app/views/data/getdata.html.erb");
 
 ?>
