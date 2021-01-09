@@ -1,0 +1,11 @@
+
+<table Border='1px'>
+<tr>
+<th>ID</th><th>Title</th><th>Description</th><th>URL</th>
+</tr>
+<% @ans.each do |data| %>
+    <tr>
+    <td><%=data["id"]%></td><td><%=data["title"]%></td><td><%=data["description"]%></td><td><%=data["url"]%></td>
+    </tr>
+<% end %>
+</table>

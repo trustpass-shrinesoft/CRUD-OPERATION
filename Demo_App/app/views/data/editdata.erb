@@ -1,0 +1,7 @@
+<form action="updatedata?id=<%@user.id%>">
+First Name : <input type="text" name="fn" value="<%=@user.FirstName%>"><br><br>
+Last Name : <input type="text" name="ln" value="<%=@user.LastName%>"><br><br>
+Cuontry : <input type="text" name="country" value="<%=@user.Country%>"><br><br>
+<input type="hidden" name="id" value="<%=@user.id%>">
+<button>Update Data</button>
+<form>

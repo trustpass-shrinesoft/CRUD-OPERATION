@@ -1,0 +1,24 @@
+<form action="filterdata">
+<input type="text" name="fn" placeholder="Enter FirstName">
+<input type="text" name="ln" placeholder="Enter LastName">
+<input type="text" name="country" placeholder="Enter Country">
+<button>Filter Data</button>
+</form><br><br><br>
+<table Border="1px">
+<tr> <th>No.</th> <th>FirstName</th> <th>LastName</th> <th>Country</th> <th colspan="2">Action</th></tr>
+<%i=0%>
+<%@user.each do |data|%>
+<%i=i+1%>
+<tr>
+    <td><%=i%></td>
+    <td><%=data["FirstName"]%></td>
+    <td><%=data["LastName"]%></td> 
+    <td><%=data["Country"]%></td> 
+    <td><button><a href="editdata?id=<%=data["id"]%>">Edit</a></button></td> 
+    <td><button><a href="deletedata?id=<%=data["id"]%>">Delete</a></button></td>
+</tr>
+<%end%>
+<tr>
+<td colspan="6"><button style="margin-left:30%"><a href='getdata'>Add More Record</a></button></td>
+</tr>
+</table>
